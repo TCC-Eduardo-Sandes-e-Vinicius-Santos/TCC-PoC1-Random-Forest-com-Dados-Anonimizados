@@ -1,2 +1,5 @@
 venv/
 .venv/
+
+anonimized_cardio_train.csv
+personal_cardio_train.csv
