@@ -1,7 +1,7 @@
 # Dicionário de Dados
 
 <div align="justify">&emsp;&emsp;
-A base de dados 'Cardiovascular Disease Dataset', foi disponibilizada no [Kaggle](https://www.kaggle.com) por Svetlana Ulianova, e consiste num conjunto de dados utilizado para tarefas de classificação em Machine Learning. O objetivo principal desta base é prever a presença ou ausência de doenças cardiovasculares em pacientes, com base em informações coletadas no momento de exames médicos.
+A base de dados 'Cardiovascular Disease Dataset', foi disponibilizada no <a href="https://www.kaggle.com">Kaggle</a> por Svetlana Ulianova, e consiste num conjunto de dados utilizado para tarefas de classificação em Machine Learning. O objetivo principal desta base é prever a presença ou ausência de doenças cardiovasculares em pacientes, com base em informações coletadas no momento de exames médicos.
 </div>
 
 <div align="justify">&emsp;&emsp;
