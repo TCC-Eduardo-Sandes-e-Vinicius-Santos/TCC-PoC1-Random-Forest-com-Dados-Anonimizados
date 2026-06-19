@@ -28,9 +28,15 @@ O processo está dividido em 4 etapas lineares:
 
 ---
 
-## Estrutura de Diretórios Recomendada
+## Documentação
 
-Para rodar localmente, recomenda-se a seguinte estrutura:
+- [Dicionário de Dados](/docs/dicionario-dados.md)
+
+---
+
+## Estrutura de Diretórios
+
+O repositório segue a seguinte estrutura:
 
 ```text
 root/
@@ -40,6 +46,9 @@ root/
 │   ├── personal_cardio_train.csv    # Gerado pela Etapa 2
 │   └── anonimized_cardio_train.csv  # Gerado pela Etapa 3
 │
+├── docs/
+│   └── dicionario-dados.md          # Diagrama dos dados usados na PoC
+|
 ├── src/
 │   └── poc1.ipynb                   # Notebook Jupyter com o código
 │
