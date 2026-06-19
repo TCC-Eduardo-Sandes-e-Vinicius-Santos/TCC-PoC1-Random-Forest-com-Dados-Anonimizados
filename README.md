@@ -66,11 +66,24 @@ Esta PoC possui uma lógica inteligente de caminhos que se adapta automaticament
 ### Opção 2: Rodando Localmente no Computador (PC/Mac)
 
 1. **Pré-requisitos:** Certifique-se de ter o Python 3.8+ instalado.
+
+```bash
+# Verificar a versão do Python
+python3 --version
+```
+
 2. **Crie a estrutura de pastas** conforme o diagrama acima e coloque o `cardio_train.csv` na pasta `data/`.
+
+```bash
+git clone https://github.com/TCC-Eduardo-Sandes-e-Vinicius-Santos/TCC-PoC1-Random-Forest-com-Dados-Anonimizados
+
+cd TCC-PoC1-Random-Forest-com-Dados-Anonimizados
+```
+
 3. **Abra o terminal** na raiz do projeto e crie um ambiente virtual (opcional, mas recomendado):
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 
 # Para ativar no Windows:
 venv\Scripts\activate
