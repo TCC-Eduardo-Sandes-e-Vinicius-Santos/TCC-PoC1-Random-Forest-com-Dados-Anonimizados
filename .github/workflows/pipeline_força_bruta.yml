@@ -2,8 +2,8 @@ name: Pipeline Força Bruta Jupyter
 
 on:
   push:
-    branches: [ main, master ]
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   executar-testes:
