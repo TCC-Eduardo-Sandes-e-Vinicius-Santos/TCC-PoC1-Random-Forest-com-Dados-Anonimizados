@@ -10,7 +10,7 @@ def rodar_pipeline_completa():
     l_valores = [1, 2, 3, 4, 5]
     t_valores = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50]
 
-    notebook_input = "notebooks/poc1.ipynb"
+    notebook_input = "poc1.ipynb"
     os.makedirs("outputs", exist_ok=True)
 
     total_execucoes = len(k_valores) * len(l_valores) * len(t_valores)
