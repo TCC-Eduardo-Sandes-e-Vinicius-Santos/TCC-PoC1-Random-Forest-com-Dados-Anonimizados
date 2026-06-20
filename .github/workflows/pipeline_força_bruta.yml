@@ -25,7 +25,7 @@ jobs:
         pip install papermill jupyter pandas matplotlib tabulate scikit-learn faker
 
     - name: Executar Loop de Força Bruta
-      run: python executar_pipeline.py
+      run: python src/executar_pipeline.py
 
     # CORREÇÃO 2: Nomes de arquivo sincronizados com o script Python
     - name: Arquivar Resultados e Ativos Visuais
