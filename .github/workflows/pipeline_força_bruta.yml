@@ -1,0 +1,37 @@
+name: Pipeline Força Bruta Jupyter
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  executar-testes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do Repositório
+      uses: actions/checkout@v4
+
+    - name: Configurar Ambiente Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.8'
+
+    # CORREÇÃO 1: Scikit-learn e Faker adicionados
+    - name: Instalar Dependências da Pipeline
+      run: |
+        python -m pip install --upgrade pip
+        pip install papermill jupyter pandas matplotlib tabulate scikit-learn faker
+
+    - name: Executar Loop de Força Bruta
+      run: python executar_pipeline.py
+
+    # CORREÇÃO 2: Nomes de arquivo sincronizados com o script Python
+    - name: Arquivar Resultados e Ativos Visuais
+      uses: actions/upload-artifact@v4
+      with:
+        name: relatorio-forca-bruta
+        path: |
+          outputs/resultado_final.csv
+          outputs/grafico_tradeoff_privacidade.png

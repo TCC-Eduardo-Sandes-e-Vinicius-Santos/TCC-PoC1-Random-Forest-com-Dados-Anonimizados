@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "pipeline-testes-ml"
+version = "0.1.0"
+description = "Pipeline automatizada de testes"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+# Manipulação e Modelação de Dados (Os seus imports)
+pandas = "^2.2.0"
+numpy = "^1.26.0"
+faker = "^24.0.0"
+scikit-learn = "^1.4.0"
+
+# Orquestração da Pipeline e Visualização (Discutidos anteriormente)
+papermill = "^2.6.0"
+jupyter = "^1.0.0"
+matplotlib = "^3.8.0"
+tabulate = "^0.9.0"
+
+[tool.poetry.group.dev.dependencies]
+# Ferramentas de qualidade de código e segurança isoladas do ambiente de produção
+# ruff = "^0.3.0"
+# bandit = "^1.7.8"
+# safety = "^3.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
