@@ -25,13 +25,13 @@ jobs:
         pip install papermill jupyter pandas matplotlib tabulate scikit-learn faker
 
     - name: Executar Loop de Força Bruta
-      run: python src/executar_pipeline.py
+      working-directory: ./src
+      run: python executar_pipeline.py
 
-    # CORREÇÃO 2: Nomes de arquivo sincronizados com o script Python
     - name: Arquivar Resultados e Ativos Visuais
       uses: actions/upload-artifact@v4
       with:
         name: relatorio-forca-bruta
         path: |
-          outputs/resultado_final.csv
-          outputs/grafico_tradeoff_privacidade.png
+          src/outputs/resultado_final.csv
+          src/outputs/grafico_tradeoff_privacidade.png
