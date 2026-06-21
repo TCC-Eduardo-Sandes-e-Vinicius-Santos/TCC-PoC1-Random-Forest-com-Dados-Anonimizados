@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def rodar_pipeline_completa():
     # Parâmetros
     k_valores = [2, 3, 5, 10, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 501]
-    l_valores = [1, 2, 3, 4, 5, 6]
+    l_valores = [2, 3, 4, 5, 6]
     t_valores = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50]
 
     diretorio_script = os.path.dirname(os.path.abspath(__file__))
@@ -17,21 +17,21 @@ def rodar_pipeline_completa():
 
     tarefas = []
 
-    # 1. Somente K (Executa 14 vezes)
+    # 1. Somente K (Executa 15 vezes)
     for k in k_valores:
         tarefas.append({'k': k, 'l': l_valores[0], 't': t_valores[0], 'uk': True, 'ul': False, 'ut': False})
 
-    # 2. Somente K e L (Executa 70 vezes)
+    # 2. Somente K e L (Executa 75 vezes)
     for k in k_valores:
         for l in l_valores:
             tarefas.append({'k': k, 'l': l, 't': t_valores[0], 'uk': True, 'ul': True, 'ut': False})
 
-    # 3. Somente K e T (Executa 140 vezes)
+    # 3. Somente K e T (Executa 150 vezes)
     for k in k_valores:
         for t in t_valores:
             tarefas.append({'k': k, 'l': l_valores[0], 't': t, 'uk': True, 'ul': False, 'ut': True})
 
-    # 4. K, L e T juntos (Executa 700 vezes)
+    # 4. K, L e T juntos (Executa 750 vezes)
     for k in k_valores:
         for l in l_valores:
             for t in t_valores:
