@@ -1,9 +1,8 @@
 name: Pipeline Força Bruta Jupyter
 
 on:
-  push:
-    branches:
-      - main
+  branches:
+    - main
 
 jobs:
   executar-testes:
