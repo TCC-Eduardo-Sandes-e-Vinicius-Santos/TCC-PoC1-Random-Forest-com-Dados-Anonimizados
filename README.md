@@ -15,6 +15,8 @@ Esta Prova de Conceito (PoC) tem como objetivo demonstrar a aplicação do *soft
 <!-- 2. **K-Anonimização:** Modelar o Requisito Não-Funcional (NFR) de Privacidade aplicando técnicas de generalização de atributos (idade, peso, altura) e supressão de identificadores (Nome, CPF, ID), garantindo que cada indivíduo seja indistinguível de pelo menos outros *k-1* indivíduos (nesta PoC, $k=5$). -->
 2. **Avaliação do *Trade-off* de Utilidade:** Treinar dois modelos de Random Forest, sendo um com os dados exatos (sem privacidade) e outro com os dados anonimizados (com privacidade) e comparar a queda na acurácia preditiva.
 
+3. **Definição de valores ótimos para anonimização nesse contexo:**  Fazer busca em grade sequencial para identificar os limites ideais de **K-Anonimato**, **L-Diversidade** e **T-Proximidade**, visando encontrar o melhor trade-off (custo-benefício) entre a proteção dos dados sensíveis e a acurácia preditiva do modelo de Inteligência Artificial.
+
 ## Arquitetura e Fluxo de Dados
 
 O processo está dividido em 4 etapas lineares:
@@ -50,7 +52,8 @@ root/
 │   └── dicionario-dados.md          # Diagrama dos dados usados na PoC
 |
 ├── src/
-│   └── poc1.ipynb                   # Notebook Jupyter com o código
+│   ├── poc1.ipynb                   # Notebook Jupyter com o código
+│   └── poc1_otimizacao.ipynb        # Notebook com a busca em grade dos parâmetros ótimos
 │
 └── README.md
 
