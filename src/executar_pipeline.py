@@ -6,7 +6,7 @@ import pandas as pd
 def rodar_pipeline_completa():
     # Parâmetros
     k_valores = [2, 3, 5, 10, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 501]
-    l_valores = [2, 3, 4, 5, 6]
+    l_valores = [2, 3, 4, 5, 6, 7, 8, 9]
     t_valores = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50]
 
     diretorio_script = os.path.dirname(os.path.abspath(__file__))
