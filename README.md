@@ -15,7 +15,7 @@ Esta Prova de Conceito (PoC) tem como objetivo demonstrar a aplicação do *soft
 <!-- 2. **K-Anonimização:** Modelar o Requisito Não-Funcional (NFR) de Privacidade aplicando técnicas de generalização de atributos (idade, peso, altura) e supressão de identificadores (Nome, CPF, ID), garantindo que cada indivíduo seja indistinguível de pelo menos outros *k-1* indivíduos (nesta PoC, $k=5$). -->
 2. **Avaliação do *Trade-off* de Utilidade:** Treinar dois modelos de Random Forest, sendo um com os dados exatos (sem privacidade) e outro com os dados anonimizados (com privacidade) e comparar a queda na acurácia preditiva.
 
-3. **Definição de valores ótimos para anonimização nesse contexo:**  Fazer busca em grade sequencial para identificar os limites ideais de **K-Anonimato**, **L-Diversidade** e **T-Proximidade**, visando encontrar o melhor trade-off (custo-benefício) entre a proteção dos dados sensíveis e a acurácia preditiva do modelo de Inteligência Artificial.
+3. **Definição de valores ótimos para anonimização nesse contexo:**  Fazer força bruta com github actions para os valores k, l e t definidos
 
 ## Arquitetura e Fluxo de Dados
 
@@ -43,6 +43,9 @@ O repositório segue a seguinte estrutura:
 ```text
 root/
 │
+├── .github/
+│   └── pipeline_forca_bruta.yml     # 
+│
 ├── data/
 │   ├── cardio_train.csv             # Dataset original baixado do Kaggle
 │   ├── personal_cardio_train.csv    # Gerado pela Etapa 2
@@ -52,8 +55,8 @@ root/
 │   └── dicionario-dados.md          # Diagrama dos dados usados na PoC
 |
 ├── src/
-│   ├── poc1.ipynb                   # Notebook Jupyter com o código
-│   └── poc1_otimizacao.ipynb        # Notebook com a busca em grade dos parâmetros ótimos
+│   ├── executar_pipeline.py         #
+│   └── poc1.ipynb                   # Notebook Jupyter com o código
 │
 └── README.md
 
@@ -75,7 +78,7 @@ Esta PoC possui uma lógica inteligente de caminhos que se adapta automaticament
 6. Vá em **Ambiente de Execução** > **Executar tudo** (ou execute as células uma a uma).
 7. Os arquivos gerados (`personal_cardio_train.csv` e `anonimized_cardio_train.csv`) aparecerão na aba de arquivos do Colab, prontos para download se desejado.
 
-### Opção 2: Rodando Localmente no Computador (PC/Mac)
+### Opção 2: Rodando Localmente no Computador (Windows/Mac/Linux)
 
 1. **Pré-requisitos:** Certifique-se de ter o Python 3.8+ instalado.
 
@@ -120,6 +123,16 @@ jupyter notebook
 
 
 6. Abra o arquivo `poc1.ipynb` dentro da pasta `src/` e execute as células. Os arquivos CSV anonimizados serão salvos automaticamente dentro da sua pasta `data/`.
+
+### Opção 3: Rodando com o CI/CD do Github
+
+1. Acesse a aba [Actions](https://github.com/TCC-Eduardo-Sandes-e-Vinicius-Santos/TCC-PoC1-Random-Forest-com-Dados-Anonimizados/actions/workflows/pipeline_forca_bruta.yml) desse repositório.
+2. No menu lateral da esquerda selecione o workflow `Pipeline Força Bruta Jupyter`.
+3. Na tela atual, no lado direito da tela clique no botão escrito **Run workflow**, no menu que abrir selecione a branch **main** e logo em seguida clique no botão verde **Run workflow**.
+4. Com isso a aguarde o fim da execução da pipeline para a obtenção dos resultados.
+5. Para visualizar os resultados, escolha e abra uma execução já finalizada, em seguida role a tela até o final e no container **Artifacts** baixe os resultados gerados.
+> *Obsevação*: Os dados válidos para essa POC são das execuções realizadas a partir do dia 21/06/2026.
+
 
 ---
 
