@@ -15,7 +15,7 @@ Esta Prova de Conceito (PoC) tem como objetivo demonstrar a aplicação do *soft
 <!-- 2. **K-Anonimização:** Modelar o Requisito Não-Funcional (NFR) de Privacidade aplicando técnicas de generalização de atributos (idade, peso, altura) e supressão de identificadores (Nome, CPF, ID), garantindo que cada indivíduo seja indistinguível de pelo menos outros *k-1* indivíduos (nesta PoC, $k=5$). -->
 2. **Avaliação do *Trade-off* de Utilidade:** Treinar dois modelos de Random Forest, sendo um com os dados exatos (sem privacidade) e outro com os dados anonimizados (com privacidade) e comparar a queda na acurácia preditiva.
 
-3. **Definição de valores ótimos para anonimização nesse contexo:**  Fazer força bruta com github actions para os valores k, l e t definidos
+3. **Otimização dos Parâmetros de Anonimização:**  Executar o pipeline iterativamente para múltiplas combinações dos parâmetros K, L e T, com o intuito de mapear e identificar os valores ótimos que preservem a utilidade preditiva do modelo (acurácia) enquanto atendam as restrições de privacidade estabelecidas.
 
 ## Arquitetura e Fluxo de Dados
 
@@ -44,7 +44,7 @@ O repositório segue a seguinte estrutura:
 root/
 │
 ├── .github/
-│   └── pipeline_forca_bruta.yml     # 
+│   └── pipeline_forca_bruta.yml     # Workflow de CI/CD para automatizar a execução
 │
 ├── data/
 │   ├── cardio_train.csv             # Dataset original baixado do Kaggle
@@ -55,8 +55,8 @@ root/
 │   └── dicionario-dados.md          # Diagrama dos dados usados na PoC
 |
 ├── src/
-│   ├── executar_pipeline.py         #
-│   └── poc1.ipynb                   # Notebook Jupyter com o código
+│   ├── executar_pipeline.py         # Script que executa o notebook iterativamente e consolida os resultados em .csv
+│   └── poc1.ipynb                   # Notebook Jupyter com o código da PoC
 │
 └── README.md
 
