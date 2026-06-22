@@ -2,7 +2,6 @@ import os
 import glob
 import papermill as pm
 import pandas as pd
-import matplotlib.pyplot as plt
 
 def rodar_pipeline_completa():
     # Parâmetros
